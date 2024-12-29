@@ -6,7 +6,7 @@
 #   dir2
 #   dir3
 #       dir4
-mkdir -p ./task/dir{1..4}
+mkdir -p ./task/dir{1..2} ./task/dir3/dir4
 # изменяем текущую директорию на task
 cd task
 # создаём пустой файл task/dir2/empty
@@ -20,7 +20,7 @@ chmod 764 ./task/dir2/hello.sh
 # сохраняем список файлов task/dir2 в task/dir2/list.txt
 ls ./dir2 > ./dir2/list.txt
 # копируем содержимое каталога task/dir2 в каталог task/dir3/dir4
-cp -r -T ./dir2 ./dir3/dir4
+cp -r ./dir2 ./dir3/dir4
 # записываем в task/dir1/summary.txt список файлов с расширением *.txt
 # находящихся в task, включая поддиректории
 find -name *.txt > ./dir1/summary.txt
